@@ -1,16 +1,28 @@
 export default function Projects() {
   const projects = [
     {
-      title: 'Bike & Car Rental Platform',
-      description: 'A comprehensive web platform for online car and bike booking. Users can browse available vehicles, make bookings, and manage their rental history with an intuitive interface.',
-      tags: ['React.js', 'Node.js', 'Express.js', 'MongoDB'],
-      image: '🚗'
+      title: 'RAG-Based PDF Chatbot',
+      description: 'Built a semantic document search assistant using LangChain, FAISS, and OpenAI embeddings to answer questions from uploaded PDFs with context-aware responses.',
+      tags: ['Python', 'LangChain', 'FAISS', 'OpenAI Embeddings'],
+      image: '📄'
     },
     {
-      title: 'Library Management System',
-      description: 'Built a robust system to manage library operations including book records, issue and return operations. Implemented structured data handling for efficient record management.',
-      tags: ['C/C++', 'Data Structures', 'System Design'],
-      image: '📚'
+      title: 'Finance Tracker',
+      description: 'Developed a personal finance tracker to record, categorize, and analyze income and expenses using SQL and Pandas for clear spending insights.',
+      tags: ['Python', 'SQL', 'Pandas', 'Data Analysis'],
+      image: '💰'
+    },
+    {
+      title: 'Personal Portfolio',
+      description: 'Created a polished portfolio website to present projects, skills, certifications, and contact details in a recruiter-friendly format.',
+      tags: ['React', 'Tailwind CSS', 'Vite', 'Frontend'],
+      image: '🌐'
+    },
+    {
+      title: 'Ridelo - Bike & Car Rental Platform',
+      description: 'Contributed as a frontend engineer on a rental booking platform, building responsive UI pages for listing, booking, and secure payment flow integration.',
+      tags: ['HTML', 'CSS', 'JavaScript', 'Frontend'],
+      image: '🚗'
     }
   ]
 
@@ -20,7 +32,7 @@ export default function Projects() {
         <h2 className="text-4xl md:text-5xl font-bold mb-4 text-center">
           Featured <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">Projects</span>
         </h2>
-        <p className="text-slate-400 text-center mb-16">Showcase of my best work and recent projects</p>
+        <p className="text-slate-400 text-center mb-16">Projects that reflect my work in AI/ML, data-driven applications, and modern web development</p>
 
         <div className="grid md:grid-cols-2 gap-8">
           {projects.map((project, index) => (
@@ -39,12 +51,12 @@ export default function Projects() {
                 ))}
               </div>
               <div className="flex gap-4">
-                <button className="flex-1 px-4 py-2 border border-blue-400 text-blue-400 rounded-lg hover:bg-blue-400/10 transition">
-                  View Project
-                </button>
-                <button className="flex-1 px-4 py-2 border border-slate-500 text-slate-300 rounded-lg hover:border-slate-300 transition">
-                  Source Code
-                </button>
+                <a href="#contact" className="flex-1 px-4 py-2 border border-blue-400 text-blue-400 rounded-lg hover:bg-blue-400/10 transition text-center">
+                  Discuss Project
+                </a>
+                <a href="https://github.com/sauravkumar464" target="_blank" rel="noreferrer" className="flex-1 px-4 py-2 border border-slate-500 text-slate-300 rounded-lg hover:border-slate-300 transition text-center">
+                  GitHub
+                </a>
               </div>
             </div>
           ))}

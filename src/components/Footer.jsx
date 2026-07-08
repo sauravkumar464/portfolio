@@ -6,8 +6,8 @@ export default function Footer() {
       <div className="max-w-6xl mx-auto">
         <div className="grid md:grid-cols-4 gap-8 mb-8">
           <div>
-            <h4 className="font-bold text-lg mb-4">Portfolio</h4>
-            <p className="text-slate-400">Building amazing digital experiences</p>
+            <h4 className="font-bold text-lg mb-4">Saurav Kumar</h4>
+            <p className="text-slate-400">Aspiring software developer focused on AI/ML, cloud computing, and modern web experiences.</p>
           </div>
           <div>
             <h4 className="font-bold text-lg mb-4">Quick Links</h4>
@@ -21,23 +21,23 @@ export default function Footer() {
           <div>
             <h4 className="font-bold text-lg mb-4">Follow</h4>
             <ul className="space-y-2 text-slate-400">
-              <li><a href="https://github.com/sauravkumar464" target="_blank" className="hover:text-blue-400 transition">GitHub</a></li>
-              <li><a href="https://linkedin.com/in/saurav-kumar-58b430295" target="_blank" className="hover:text-blue-400 transition">LinkedIn</a></li>
-              <li><a href="mailto:SRBHARDWAJ464@GMAIL.COM" className="hover:text-blue-400 transition">Email</a></li>
+              <li><a href="https://github.com/sauravkumar464" target="_blank" rel="noreferrer" className="hover:text-blue-400 transition">GitHub</a></li>
+              <li><a href="https://linkedin.com/in/saurav-kumar-er2027" target="_blank" rel="noreferrer" className="hover:text-blue-400 transition">LinkedIn</a></li>
+              <li><a href="mailto:srbhardwaj464@gmail.com" className="hover:text-blue-400 transition">Email</a></li>
               <li><a href="tel:+919431713909" className="hover:text-blue-400 transition">Phone</a></li>
             </ul>
           </div>
           <div>
-            <h4 className="font-bold text-lg mb-4">Legal</h4>
+            <h4 className="font-bold text-lg mb-4">Resume</h4>
             <ul className="space-y-2 text-slate-400">
-              <li><a href="#" className="hover:text-blue-400 transition">Privacy Policy</a></li>
-              <li><a href="#" className="hover:text-blue-400 transition">Terms of Service</a></li>
+              <li><a href="/Saurav_Kumar_Resume_GenAI_907.docx" target="_blank" rel="noreferrer" className="hover:text-blue-400 transition">View Resume</a></li>
+              <li><a href="#contact" className="hover:text-blue-400 transition">Hire Me</a></li>
             </ul>
           </div>
         </div>
 
         <div className="border-t border-slate-700 pt-8 text-center text-slate-400">
-          <p>&copy; {currentYear} Saurav Kumar. All rights reserved. | Jaipur, India</p>
+          <p>&copy; {currentYear} Saurav Kumar. All rights reserved. | Jaipur, Rajasthan</p>
         </div>
       </div>
     </footer>

@@ -19,7 +19,8 @@ export default function Header() {
           <button onClick={() => scrollToSection('hero')} className="hover:text-blue-400 transition">Home</button>
           <button onClick={() => scrollToSection('projects')} className="hover:text-blue-400 transition">Projects</button>
           <button onClick={() => scrollToSection('skills')} className="hover:text-blue-400 transition">Skills</button>
-          <button onClick={() => scrollToSection('testimonials')} className="hover:text-blue-400 transition">Testimonials</button>
+          <button onClick={() => scrollToSection('certificates')} className="hover:text-blue-400 transition">Certificates</button>
+          <button onClick={() => scrollToSection('testimonials')} className="hover:text-blue-400 transition">Experience</button>
           <button onClick={() => scrollToSection('contact')} className="hover:text-blue-400 transition">Contact</button>
         </div>
         <button className="md:hidden" onClick={() => setIsMenuOpen(!isMenuOpen)}>
@@ -31,7 +32,8 @@ export default function Header() {
           <button onClick={() => scrollToSection('hero')} className="hover:text-blue-400 transition">Home</button>
           <button onClick={() => scrollToSection('projects')} className="hover:text-blue-400 transition">Projects</button>
           <button onClick={() => scrollToSection('skills')} className="hover:text-blue-400 transition">Skills</button>
-          <button onClick={() => scrollToSection('testimonials')} className="hover:text-blue-400 transition">Testimonials</button>
+          <button onClick={() => scrollToSection('certificates')} className="hover:text-blue-400 transition">Certificates</button>
+          <button onClick={() => scrollToSection('testimonials')} className="hover:text-blue-400 transition">Experience</button>
           <button onClick={() => scrollToSection('contact')} className="hover:text-blue-400 transition">Contact</button>
         </div>
       )}

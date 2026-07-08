@@ -1,28 +1,28 @@
 export default function Skills() {
   const skillCategories = [
     {
+      category: 'AI / ML',
+      skills: ['Python', 'Machine Learning', 'NumPy', 'Pandas', 'Matplotlib', 'LangChain']
+    },
+    {
+      category: 'Cloud & Data',
+      skills: ['AWS ML', 'SQL', 'MySQL', 'Data Analysis', 'RAG Systems']
+    },
+    {
       category: 'Languages',
-      skills: ['JavaScript', 'C', 'C++', 'HTML', 'CSS']
+      skills: ['Python', 'Java', 'C', 'C++', 'JavaScript', 'SQL']
     },
     {
-      category: 'Frontend',
-      skills: ['React.js', 'HTML5', 'CSS3', 'Tailwind CSS', 'Responsive Design']
+      category: 'Web Development',
+      skills: ['HTML', 'CSS', 'JavaScript', 'React.js']
     },
     {
-      category: 'Backend',
-      skills: ['Node.js', 'Express.js', 'REST APIs', 'Backend Development']
+      category: 'Tools & Workflow',
+      skills: ['Git', 'GitHub', 'VS Code', 'Jupyter Notebook']
     },
     {
-      category: 'Database',
-      skills: ['MongoDB', 'MySQL', 'Data Management', 'Database Design']
-    },
-    {
-      category: 'Tools & Technologies',
-      skills: ['Git', 'GitHub', 'VS Code', 'NPM', 'Vite', 'Postman']
-    },
-    {
-      category: 'Other Skills',
-      skills: ['Data Structures', 'Operating Systems', 'Computer Networks', 'System Design']
+      category: 'Core CS',
+      skills: ['Data Structures', 'Algorithms', 'Operating Systems', 'Computer Networks', 'DBMS']
     }
   ]
 
@@ -32,7 +32,7 @@ export default function Skills() {
         <h2 className="text-4xl md:text-5xl font-bold mb-4 text-center">
           Skills & <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">Expertise</span>
         </h2>
-        <p className="text-slate-400 text-center mb-16">Technologies and tools I work with</p>
+        <p className="text-slate-400 text-center mb-16">Technologies, tools, and concepts I use in building modern software and AI-driven solutions</p>
 
         <div className="grid md:grid-cols-2 gap-8">
           {skillCategories.map((category, index) => (
@@ -54,16 +54,16 @@ export default function Skills() {
 
         <div className="mt-16 grid md:grid-cols-3 gap-8">
           <div className="text-center">
-            <div className="text-5xl font-bold text-blue-400 mb-2">9.0</div>
-            <p className="text-slate-300">CGPA (B.Tech)</p>
+            <div className="text-5xl font-bold text-blue-400 mb-2">9+</div>
+            <p className="text-slate-300">CGPA in B.Tech CSE</p>
           </div>
           <div className="text-center">
-            <div className="text-5xl font-bold text-cyan-400 mb-2">5+</div>
-            <p className="text-slate-300">Certifications</p>
+            <div className="text-5xl font-bold text-cyan-400 mb-2">7+</div>
+            <p className="text-slate-300">Certifications & Trainings</p>
           </div>
           <div className="text-center">
-            <div className="text-5xl font-bold text-blue-400 mb-2">MERN</div>
-            <p className="text-slate-300">Stack Expert</p>
+            <div className="text-5xl font-bold text-blue-400 mb-2">AI/ML</div>
+            <p className="text-slate-300">Focused portfolio</p>
           </div>
         </div>
       </div>
