@@ -1,12 +1,14 @@
 import { useState } from 'react'
 
+const FORM_ENDPOINT = 'https://formsubmit.co/srbhardwaj464@gmail.com'
+
 export default function Contact() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     message: ''
   })
-  const [submitted, setSubmitted] = useState(false)
+  const [status, setStatus] = useState({ sent: false, error: false, loading: false })
 
   const handleChange = (e) => {
     const { name, value } = e.target
@@ -16,15 +18,37 @@ export default function Contact() {
     }))
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
-    // Here you would typically send the form data to a server
-    console.log('Form submitted:', formData)
-    setSubmitted(true)
-    setTimeout(() => {
-      setSubmitted(false)
+    setStatus({ sent: false, error: false, loading: true })
+
+    try {
+      const response = await fetch(FORM_ENDPOINT, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded',
+          Accept: 'application/json'
+        },
+        body: new URLSearchParams({
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+          _subject: 'New message from portfolio contact form',
+          _captcha: 'false',
+          _next: `${window.location.origin}/thank-you.html`
+        })
+      })
+
+      if (!response.ok) {
+        throw new Error('Failed to send message')
+      }
+
+      setStatus({ sent: true, error: false, loading: false })
       setFormData({ name: '', email: '', message: '' })
-    }, 3000)
+    } catch (error) {
+      setStatus({ sent: false, error: true, loading: false })
+      console.error('Contact form error:', error)
+    }
   }
 
   return (
@@ -99,12 +123,16 @@ export default function Contact() {
             </div>
             <button
               type="submit"
-              className="w-full px-6 py-3 bg-gradient-to-r from-blue-400 to-cyan-400 text-slate-900 font-bold rounded-lg hover:shadow-lg hover:shadow-blue-400/50 transition"
+              disabled={status.loading}
+              className="w-full px-6 py-3 bg-gradient-to-r from-blue-400 to-cyan-400 text-slate-900 font-bold rounded-lg hover:shadow-lg hover:shadow-blue-400/50 transition disabled:opacity-60"
             >
-              Send Message
+              {status.loading ? 'Sending...' : 'Send Message'}
             </button>
-            {submitted && (
+            {status.sent && (
               <p className="text-green-400 text-center">Message sent successfully! 🎉</p>
+            )}
+            {status.error && (
+              <p className="text-red-400 text-center">Something went wrong. Please try again later.</p>
             )}
           </form>
         </div>
